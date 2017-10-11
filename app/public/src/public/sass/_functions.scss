@@ -1,0 +1,40 @@
+// Create links with 4 colors
+@mixin linkColors($link, $focus, $visit, $hover, $active) {
+    color: $link;
+    
+    &:focus {
+      color: $focus;
+    }
+    &:visited:not(.active) {
+      color: $visit;
+    }
+    &:hover {
+      color: $hover;
+      cursor: pointer;
+    }
+    &:active {
+      color: $active;
+    }
+}
+
+@mixin setButtonColors($color) {
+  background-color: $color;
+
+  &:hover {
+    background-color: darken($color, 5%);
+  }
+}
+
+@function setTextColor($background-color) {
+  @if (lightness($background-color) > 50) {
+    @return #000000; 
+  } @else {
+    @return #ffffff;
+  }
+}
+
+@mixin boxSizing(){
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

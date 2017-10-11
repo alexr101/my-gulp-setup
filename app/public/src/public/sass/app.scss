@@ -1,0 +1,94 @@
+@import 'config';
+@import 'functions';
+@import 'libs/bootstrap';
+@import 'layout/layout';
+@import 'views/gallery';
+@import 'views/newsletter';
+@import 'views/navigation';
+@import 'views/footer';
+@import 'views/auth';
+@import 'views/contact/contactEnvelope';
+
+// General
+body {
+  font-family: $primary-font;
+  margin-top: $navbar-height;
+}
+
+.accent {
+  background-color: $accent-color;
+}
+.no-wrap{
+  white-space: nowrap;
+}
+
+.box {
+  margin: 10px 0;
+}
+
+.fix-to-top {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.border-sm { border: $border-sm solid $border-color; }
+.border-md { border: $border-md solid $border-color; }
+.border-lg { border: $border-lg solid $border-color; }
+.border-xl { border: $border-xl solid $border-color; }
+
+// Keep above all margin sets
+.center { margin: 0 auto; }
+
+.background-primary { background-color: $primary-color; }
+.background-secondary { background-color: $secondary-color; }
+.background-accent { background-color: $accent-color; }
+
+.margin-sm { margin: 15px; }
+.margin-md { margin: 30px; }
+.margin-lg { margin: 48px; }
+.margin-xl { margin: 80px; }
+
+.margin-ver-sm { margin-top: 15px; margin-bottom: 15px; }
+.margin-ver-md { margin-top: 30px; margin-bottom: 30px; }
+.margin-ver-lg { margin-top: 45px; margin-bottom: 45px; }
+.margin-ver-xl { margin-top: 80px; margin-bottom: 80px; }
+
+.margin-bot-sm { margin-bottom: 15px; }
+.margin-bot-md { margin-bottom: 30px; }
+.margin-bot-lg { margin-bottom: 45px; }
+.margin-bot-xl { margin-bottom: 80px; }
+
+.margin-hor-sm { margin-left: 15px; margin-right: 15px; }
+.margin-hor-md { margin-left: 30px; margin-right: 30px; }
+.margin-hor-lg { margin-left: 45px; margin-right: 45px; }
+.margin-hor-xl { margin-left: 80px; margin-right: 80px; }
+
+.padding-sm { padding: 15px; }
+.padding-md { padding: 30px; }
+.padding-lg { padding: 48px; }
+.padding-xl { padding: 80px; }
+
+.padding-ver-sm { padding-top: 15px; padding-bottom: 15px; }
+.padding-ver-md { padding-top: 30px; padding-bottom: 30px; }
+.padding-ver-lg { padding-top: 45px; padding-bottom: 45px; }
+.padding-ver-xl { padding-top: 80px; padding-bottom: 80px; }
+
+.padding-bot-sm { padding-bottom: 15px; }
+.padding-bot-md { padding-bottom: 30px; }
+.padding-bot-lg { padding-bottom: 45px; }
+.padding-bot-xl { padding-bottom: 80px; }
+
+.padding-hor-sm { padding-left: 15px; padding-right: 15px; }
+.padding-hor-md { padding-left: 30px; padding-right: 30px; }
+.padding-hor-lg { padding-left: 45px; padding-right: 45px; }
+.padding-hor-xl { padding-left: 80px; padding-right: 80px; }
+
+.top-buffer { margin-top:20px; }
+.bottom-buffer { margin-bottom:20px; }
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+

@@ -1,0 +1,60 @@
+// Color Names
+$paleGold: #C0B283;
+$silk: #DCD0C0;
+$paper: #F4F4F4;
+$charcoal: #373737;
+$greyCloud: #919191;
+
+// Color Assignments
+$primary-color: $paper;
+$secondary-color: $greyCloud;
+$accent-color: $paleGold;
+$background-color: $charcoal;
+
+// Responsive
+$web: 1200px;
+$tablet: 768px;
+$phone: 480px;
+
+// Contact
+
+// Contact - Envelope
+$top-flap-color: $primary-color;
+$side-flap-color: $secondary-color;
+$bottom-flap-color: lighten($secondary-color, 10%);
+$button-color: $accent-color;
+$button-border-bottom-color: darken($accent-color, 10%);
+$form-color: $primary-color;
+$x-color: $accent-color;
+$error-color: $primary-color;
+$input-color: $secondary-color;
+$input-text-color: $primary-color;
+$envelope-border-color: $accent-color;
+$reset-border: $secondary-color;
+
+
+// Fonts
+$bellefair: Bellefair, sans-serif;
+$abel: Abel, sans-serif;
+$roboto: Roboto, sans-serif;
+$sansSerif: sans-serif;
+
+$primary-font: $roboto;
+
+// Bootstrap
+$navbar-height: 60px;
+$navbar-background-color: $primary-color;
+$nav-active-bottom-color: $accent-color;
+$navbar-font-size: 13px;
+$jumbotron-font-family: $primary-font;
+$jumbotron-color: inherit;
+$jumbotron-background-color: transparent;
+$nav-current-color: $accent-color;
+$brand-font-size: 25px;
+
+// Borders
+$border-color: darken($primary-color, 10%);
+$border-sm: 1px;
+$border-md: 3px;
+$border-lg: 5px;
+$border-xl: 10px;

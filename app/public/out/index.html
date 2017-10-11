@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<!-- Ensure proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image Gallery</title>
+	
+	<!--<link data-require="bootstrap-css@2.3.2" data-semver="2.3.2" rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" />-->
+	<link rel="stylesheet" type="text/css" href="public/css/libs/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="libs/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css" >
+	<link href="https://fonts.googleapis.com/css?family=Bellefair|Abel|Roboto" rel="stylesheet">
+
+</head>
+	<script src="libs/jquery-3.1.0.js"></script>
+	<script src="libs/bootstrap.min.js"></script>
+	<script src="libs/angular.min.js"></script>
+  <!--<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>-->
+
+	<script src="libs/angular-ui-router.js"></script>
+	
+	<script src="app.js"></script>
+	<!-- <script src="app/shared/directives/backgroundImg/backgroundImgDirective.js"></script>
+	<script src="app/shared/directives/toggleAuth/toggleAuthDirective.js"></script>
+	<script src="app/shared/directives/ngParallax/ngParallaxDirective.js"></script>
+	<script src="app/shared/directives/loremIpsum/loremIpsumDirective.js"></script>
+	<script src="app/shared/directives/setClassWhenAtTop/setClassWhenAtTopDirective.js"></script>
+	<script src="app/shared/directives/contactEnvelope/contactEnvelopeDirective.js"></script>
+	<script src="app/shared/services/authService.js"></script>
+	<script src="app/shared/services/testService.js"></script>
+	<script src="app/shared/services/IsMobileService.js"></script>
+	
+
+	<script src="app/components/gallery/GalleryCtrl.js"></script>
+	<script src="app/components/about/AboutCtrl.js"></script>
+	<script src="app/components/giftCards/GiftCardCtrl.js"></script>
+	<script src="app/components/sideMenu/SideMenuCtrl.js"></script>
+	<script src="app/components/artShows/ArtShowsCtrl.js"></script>
+	<script src="app/components/contact/ContactCtrl.js"></script>
+	<script src="app/components/navigation/NavigationCtrl.js"></script>
+	<script src="app/components/pagination/PaginationCtrl.js"></script>
+	<script src="app/components/PrivacyPolicy/PrivacyPolicyCtrl.js"></script>
+	<script src="app/components/auth/AuthCtrl.js"></script>
+
+	<script src="app/uiRouter.js"></script> -->
+
+<body ng-app="app" ng-cloak>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="NavigationCtrl">
+		<div class="container">
+			<div class="navbar-header">
+
+				<!--Collapse Button-->
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				</button>
+		     	<!---->
+					<a class="navbar-brand" href="#">
+						<span><img class="logo-image" src="public/assets/images/Logo.png" alt=""></span>  
+						
+					</a>
+			</div>
+			<!--Div that collapses items-->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a ng-class="{ active: isActive('/about') }" ui-sref="about">About</a></li>
+					<li><a ng-class="{ active: isActive('/gift-cards') }" ui-sref="giftCards">Gift Cards</a></li>
+					<li><a ng-class="{ active: isActive('/contact') }" ui-sref="contact">Contact Us</a></li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+
+					<div class="nav-container no-wrap">
+							<a class='nav-auth' ui-sref="auth({login:true, register:false})">Login</a>
+							<a class='nav-auth accent' ui-sref="auth({register:true, login:true})">Sign Up</a>
+					</div>
+					
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	
+
+		<!--<div ng-controller="PaginationCtrl">
+			<h1>Images</h1>
+			<ul>
+				<li ng-repeat="item in filteredItems">{{item}}</li>
+			</ul>
+			View <select ng-model="viewBy" ng-change="setItemsPerPage(viewBy)">
+				<option>3</option>
+				<option>5</option>
+				<option>10</option>
+				<option>20</option>
+				<option>30</option>
+				<option>40</option>
+				<option>50</option>
+			</select> {{ itemName }} at a time.
+
+    	<pagination 
+				total-items="totalItems" 
+				ng-model="currentPage" 
+				ng-change="pageChanged()" 
+				class="pagination-sm" 
+				items-per-page="itemsPerPage">
+			</pagination>		
+
+		</div>-->
+
+		
+	<div ui-view></div>
+
+	<a ui-sref="home"></a>
+
+	<!-- Footer -->
+    <footer class="footer-bs">
+        <div class="row">
+        	<div class="col-md-3 footer-brand animated fadeInLeft">
+            	<h2>Logo</h2>
+                <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
+                <p>AVID 2017, All rights reserved</p>
+            </div>
+        	<div class="col-md-4 footer-nav animated fadeInUp">
+            	<h4>Categories</h4>
+            	<div class="col-md-6">
+                    <ul class="pages">
+                        <li><a href="#">Travel</a></li>
+                        <li><a href="#">Nature</a></li>
+                        <li><a href="#">Explores</a></li>
+                        <li><a href="#">Science</a></li>
+                        <li><a href="#">Advice</a></li>
+                    </ul>
+                </div>
+            	<div class="col-md-6">
+                    <ul class="list">
+                        <li><a ui-sref="about">About Us</a></li>
+                        <li><a ui-sref="contact">Contact</a></li>
+                        <li><a ui-sref="terms">Terms & Conditions</a></li>
+                        <li><a ui-sref="privacyPolicy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        	<div class="col-md-2 footer-social animated fadeInDown">
+            	<h4>Follow Us</h4>
+            	<ul>
+                	<li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                	<li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                	<li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                	<li><a href="https://www.rss.com" target="_blank">RSS</a></li>
+                </ul>
+            </div>
+        	<div class="col-md-3 footer-ns animated fadeInRight">
+            	<h4>Newsletter</h4>
+                <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins</p>
+                <p>
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search for...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+                      </span>
+                    </div><!-- /input-group -->
+                 </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

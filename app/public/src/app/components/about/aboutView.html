@@ -1,0 +1,24 @@
+<div class="container padding-bot-md">
+  <div class="jumbotron">
+    <h1>{{aboutUs}}</h1>
+    <p>{{content}}</p>
+  </div>
+
+  <div>
+  
+    <p lorem-ipsum></p>
+    <p lorem-ipsum></p>
+    <p lorem-ipsum></p>
+    <p lorem-ipsum></p>
+    <p lorem-ipsum></p>
+
+  </div>
+</div>
+
+<div ng-repeat="img in parallaxImages">
+  <div class="box">
+    <div ng-parallax pattern="img.url" speed=img.speed height=img.height> </div>  
+  </div>
+</div>
+
+

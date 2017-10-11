@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="padding-ver-md">
+    <div class='left-60'>
+      <div class="jumbotron">
+        <h1>Page Title</h1>
+        <p lorem-ipsum></p>
+
+        <!--<h2>Our Book Gallery</h2>
+        <p>Book lovers, where do you keep your books? If you have a private library, congrats; but if you don’t, probably you’re keeping them on the bookshelves. Here are 32 really cool bookshelves which you’d love to have for organizing your reading materials.</p>-->
+      </div>
+      <div ui-view="images"></div>  
+    </div>
+
+
+    <div class='right-35'>
+      <div set-class-when-at-top='fix-to-top' padding-when-at-top={{navHeight}}>
+        <div ui-view="newsletter"></div>
+        <div ui-view="images"></div> 
+      </div>
+    </div>
+  </div>
+
+  <div ui-view="artShows"></div>
+</div>

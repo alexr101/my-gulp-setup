@@ -1,0 +1,14 @@
+{ 
+  "parallaxImages": [
+    {
+      "url": "./public/assets/images/background/modern-bookshelf.jpg",
+      "speed": "10",
+      "height": "700"
+    },
+    {
+      "url": "./public/assets/images/background/bookshelf-1.jpg",
+      "speed": "20",
+      "height": "400"
+    }
+  ]
+}

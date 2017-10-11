@@ -1,0 +1,78 @@
+// Bootstrap
+.navbar {
+  min-height: $navbar-height;
+}
+
+.jumbotron{
+	color: $jumbotron-color;
+  background-color: $jumbotron-background-color;
+  margin-bottom: 0 !important;
+}
+
+.navbar-inverse {
+	background: $navbar-background-color;
+}
+
+.navbar-inverse .navbar-toggle{
+  border: 0;
+  margin-top: 15px
+}
+
+.container-fluid>.navbar-collapse, 
+.container-fluid>.navbar-header, 
+.container>.navbar-collapse, 
+.container>.navbar-header {
+    border: 0;
+}
+
+.navbar-inverse .navbar-toggle,
+.navbar-inverse .navbar-toggle:focus, 
+.navbar-inverse .navbar-toggle:visited {
+  background-color: $secondary-color;
+}
+.navbar-inverse .navbar-toggle:hover {
+    background-color: $background-color;
+}
+
+.navbar-inverse {
+
+  font-size: $navbar-font-size;
+  border-bottom: 0;
+  border-top: 4px solid$accent-color;
+
+  .navbar-nav {
+    li {
+
+      a {
+        @include boxSizing();
+        @include linkColors($background-color, $background-color, $background-color, $background-color, $accent-color);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+
+      .active{
+        @include boxSizing();
+        color: $nav-current-color;
+        border-bottom: 3px solid $nav-active-bottom-color;
+        padding-bottom: 17px;
+      }
+    }
+  }
+
+  .navbar-brand {
+    @include linkColors($background-color, $background-color, $background-color, $accent-color, $accent-color);
+    padding: 0 30px 0 0;
+    font-size: $brand-font-size;
+    
+    img {
+      height: $navbar-height;
+	    padding: 5px;
+
+    }
+  }
+
+}

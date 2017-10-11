@@ -1,0 +1,1 @@
+{"version":3,"sources":["appy.js"],"names":[],"mappings":"AAAA","file":"../scripts.js","sourcesContent":["var app = angular.module(\"app\", [\"ui.router\" /*, \"ui.bootstrap\"*/]);"]}
